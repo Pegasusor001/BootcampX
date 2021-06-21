@@ -15,3 +15,13 @@ CREATE TABLE students (
   end_date DATE,
   cohort_id INTEGER REFERENCES cohorts(id) ON DELETE CASCADE
 );
+
+CREATE TABLE assignment (
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  content VARCHAR(255),
+  phone VARCHAR(32),
+  day DATE,
+  chapter INTEGER
+  duration INTEGER
+);
